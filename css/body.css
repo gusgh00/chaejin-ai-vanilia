@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url("../imgs/back.jpg")
+  }
+
+  @media (min-width: 1000px) {
+    .AppChat {
+      position: relative;
+      max-width: 900px;
+      top: 100px;
+      left: 50%;
+      margin-left: -450px;
+    }
+  }
+  @media (max-width: 999px) and (min-width: 741px) {
+    .AppChat {
+      position: relative;
+      max-width: 740px;
+      top: 50px;
+      left: 50%;
+      margin-left: -370px;
+    }
+  }
+  @media (max-width: 740px) {
+    .AppChat {
+      position: relative;
+      max-width: 350px;
+      top: 50px;
+      left: 50%;
+      margin-left: -175px;
+    }
+  }

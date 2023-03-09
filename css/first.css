@@ -1,0 +1,25 @@
+.FirstToken {
+    position: absolute;
+    z-index: 3000;
+    width: 1920px;
+    height: 1080px;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    display: none;
+    /* display: flex; */
+}
+/* @media (min-width: 1000px) {
+    .TokenInput {
+        width: 900px;
+    }
+}
+@media (max-width: 999px) and (min-width: 741px) {
+    .TokenInput {
+        width: 740px;
+    }
+}
+@media (max-width: 740px) {
+    .TokenInput {
+        width: 740px;
+    }
+} */

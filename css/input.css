@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'KorailRoundGothicBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@media (min-width: 1000px) {
+    .firstSlot {
+        width: 100%;
+    }
+    .secondSlot {
+        width: 100%;
+    }
+    .InputDiv {
+        float: left;
+        margin-top: 10px;
+        width: 800px;
+        height: 40px;
+    }
+    .SendDiv {
+        float: right;
+        margin-top: 10px;
+        width: 70px;
+        height: 42px;
+    }
+    .ResetDiv {
+        float: right;
+        margin-top: 10px;
+        width: 70px;
+        height: 42px;
+    }
+    .ChatInput {
+        width: 100%;
+        height: 100%;
+        font-size: 25px;
+        font-family: 'GmarketSansMedium';
+        border-radius: 0.6rem;
+        border: 1px solid #000000;
+    }
+    .ChatSend {
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-family: 'KorailRoundGothicBold';
+        line-height: 100%;
+        border-radius: 0.6rem;
+        background-color: #ffa0bf;
+        border: 1px solid #fff;
+    }
+    .ChatReset {
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-family: 'KorailRoundGothicBold';
+        line-height: 100%;
+        border-radius: 0.6rem;
+        background-color: #9eee8c;
+        border: 1px solid #fff;
+    }
+    .Name {
+        color: #545454;
+        font-size: 35px;
+        line-height: 100%;
+        transition: 0.3s;
+    }
+    .Name:hover {
+        scale: 1.1;
+    }
+}
+@media (max-width: 999px) and (min-width: 741px) {
+    .firstSlot {
+        width: 100%;
+    }
+    .secondSlot {
+        width: 100%;
+    }
+    .InputDiv {
+        float: left;
+        margin-top: 10px;
+        width: 650px;
+        height: 40px;
+    }
+    .SendDiv {
+        float: right;
+        margin-top: 10px;
+        width: 70px;
+        height: 42px;
+    }
+    .ResetDiv {
+        float: right;
+        margin-top: 10px;
+        width: 70px;
+        height: 42px;
+    }
+    .ChatInput {
+        width: 100%;
+        height: 100%;
+        font-size: 25px;
+        font-family: 'GmarketSansMedium';
+        border-radius: 0.6rem;
+        border: 1px solid #000000;
+    }
+    .ChatSend {
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-family: 'KorailRoundGothicBold';
+        line-height: 100%;
+        border-radius: 0.6rem;
+        background-color: #ffa0bf;
+        border: 1px solid #fff;
+    }
+    .ChatReset {
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-family: 'KorailRoundGothicBold';
+        line-height: 100%;
+        border-radius: 0.6rem;
+        background-color: #9eee8c;
+        border: 1px solid #fff;
+    }
+    .Name {
+        color: #545454;
+        font-size: 35px;
+        line-height: 100%;
+        transition: 0.3s;
+    }
+}
+@media (max-width: 740px) {
+    .firstSlot {
+        width: 100%;
+    }
+    .secondSlot {
+        width: 100%;
+    }
+    .InputDiv {
+        float: left;
+        margin-top: 10px;
+        width: 260px;
+        height: 25px;
+    }
+    .SendDiv {
+        float: right;
+        margin-top: 10px;
+        width: 70px;
+        height: 26px;
+    }
+    .ResetDiv {
+        float: right;
+        margin-top: 10px;
+        width: 70px;
+        height: 26px;
+    }
+    .ChatInput {
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        font-family: 'GmarketSansMedium';
+        border-radius: 0.6rem;
+        border: 1px solid #000000;
+    }
+    .ChatSend {
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-family: 'KorailRoundGothicBold';
+        line-height: 100%;
+        border-radius: 0.6rem;
+        background-color: #ffa0bf;
+        border: 1px solid #fff;
+    }
+    .ChatReset {
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-family: 'KorailRoundGothicBold';
+        line-height: 100%;
+        border-radius: 0.6rem;
+        background-color: #9eee8c;
+        border: 1px solid #fff;
+    }
+    .Name {
+        color: #545454;
+        font-size: 30px;
+        line-height: 100%;
+        transition: 0.3s;
+    }
+}
+input:focus {
+    outline: none;
+}
+input {
+    border: 0 solid black;
+}

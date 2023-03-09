@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="../imgs/favicon.ico">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/body.css">
+    <link rel="stylesheet" href="./css/chat.css">
+    <link rel="stylesheet" href="./css/input.css">
+    <link rel="stylesheet" href="./css/first.css">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>채진이</title>
+</head>
+
+<body>
+    <header class='Header'>
+        <div class='HeadDiv'>
+            <span class='ChatGPT'>OpenAI</span>
+            <img src='./imgs/ChaeJinBot.png' class='ChaeJinImg' alt='chatbotimage'></img>
+            <span class='ChaeJin'>채진이 봇</span>
+        </div>
+    </header>
+    <div class="AppChat">
+        <div class='ChatMain' id='MainChat'>
+            <!-- <div class='ChatDiv'>
+                <span class='ChatBox MyChat'>
+                    토큰을 먼저 입력하세요!
+                </span>
+            </div> -->
+            <div>
+                <img src="imgs/ChaeJinBot.png" class='ChatBotImg' alt='chatbotimage'></img>
+                <div class='ChatDiv ChatBox BotChat'>
+                    <span>
+                        토큰을 먼저 입력하세요!<br>
+                        Get Token in OpenAI<br>
+                        <a href="https://openai.com/product" target="_blank">https://openai.com/product</a>
+                    </span>
+                </div>
+            </div>
+            <div>
+                <img src="imgs/ChaeJinBot.png" class='ChatBotImg' alt='chatbotimage'></img>
+                <div class='ChatDiv ChatBox BotChat'>
+                    <span>
+                        토큰 입력 후 지우지 마세요!
+                    </span>
+                </div>
+            </div>
+            <div>
+                <img src="imgs/ChaeJinBot.png" class='ChatBotImg' alt='chatbotimage'></img>
+                <div class='ChatDiv ChatBox BotChat'>
+                    <span>
+                        그리고 채진이와 채팅을 해보세요!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class='InputBox'>
+            <div class="firstSlot">
+                <div class="InputDiv TokenInput">
+                    <input class='ChatInput' id="Token" placeholder="토큰을 입력하세요!" />
+                </div>
+                <div class='ResetDiv'>
+                    <button id="reset" class='ChatReset Name' onclick='onReset();'>
+                        ↻
+                    </button>
+                </div>
+            </div>
+            <div class="secondSlot">
+                <div class='InputDiv'>
+                    <input class='ChatInput' id="input" placeholder="채팅 메세지를 입력하세요!" />
+                </div>
+                <div class='SendDiv'>
+                    <button id="send" class='ChatSend Name'>
+                        ↩
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        import { Configuration, OpenAIApi } from 'https://cdn.skypack.dev/openai';
+
+        document.querySelector('#send').addEventListener('click', chatnow);
+
+        function chatnow() {
+            var template = `<div class='ChatDiv'>
+                    <span class='ChatBox MyChat'>
+                        ${document.querySelector('#input').value}
+                    </span>
+                </div>`
+            document.querySelector('#MainChat').insertAdjacentHTML('beforeend', template);
+
+            const configuration = new Configuration({
+                apiKey: document.querySelector('#Token').value,
+            });
+            const openai = new OpenAIApi(configuration);
+
+            openai.createCompletion({
+                model: "text-curie-001",
+                prompt: document.querySelector('#input').value,
+                temperature: 0.9,
+                max_tokens: 256,
+                top_p: 1,
+                frequency_penalty: 0,
+                presence_penalty: 0,
+            }).then((result) => {
+                var template = `<div>
+                    <img src="imgs/ChaeJinBot.png" class='ChatBotImg' alt='chatbotimage'></img>
+                    <div class='ChatDiv ChatBox BotChat'>
+                        <span>
+                            ${result.data.choices[0].text}
+                        </span>
+                    </div>
+                </div>`
+                document.querySelector('#MainChat').insertAdjacentHTML('beforeend', template);
+            })
+            document.querySelector('#input').value = "";
+        }
+        document.querySelector('#input').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                chatnow()
+            }
+        })
+
+        setInterval(() => $('#MainChat').scrollTop($('#MainChat')[0].scrollHeight), 1000)
+    </script>
+    <script>
+        function onReset() {
+            window.location.reload();
+            console.clear();
+        }
+    </script>
+</body>
+
+</html>
