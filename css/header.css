@@ -18,35 +18,49 @@
 }
 .HeadDiv {
     position: relative;
-    width: 800px;
+    width: 300px;
     left: 50%;
-    margin-left: -400px;
+    margin-left: -150px;
 }
 .ChatGPT {
-    position: relative;
+    position: absolute;
     top: -10px;
-    width: 100px;
-    left: 44%;
-    margin-left: -50px;
+    width: 80px;
+    left:0;
+    right:0;
+    margin-left:220px;
+    margin-right:auto;
     font-family: 'SEBANG_Gothic_Bold';
     font-size: 20px;
     color: #fff;
 }
 .ChaeJinImg {
-    position: relative;
-    top: 2px;
+    position: absolute;
+    top: -20px;
     width: 40px;
-    left: 50%;
-    margin-left: -20px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
 }
 .ChaeJin {
-    position: relative;
+    position: absolute;
     top: -10px;
-    width: 100px;
-    left: 60%;
-    margin-left: -50px;
+    width: 80px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:220px;
     font-family: 'SEBANG_Gothic_Bold';
     font-size: 20px;
     color: #ff447f;
     text-shadow: -1px 0px #ffffff, 0px 1px #ffffff, 1px 0px #ffffff, 0px -1px #ffffff;
 }
+/* @media (max-width: 400px) {
+    .ChaeJin {
+        display: none;
+    }
+    .ChatGPT {
+        display: none;
+    }
+} */

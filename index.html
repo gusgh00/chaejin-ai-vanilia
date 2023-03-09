@@ -67,7 +67,7 @@
                 </div>
                 <div class='ResetDiv'>
                     <button id="reset" class='ChatReset Name' onclick='onReset();'>
-                        ↻
+                        RESET
                     </button>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                 </div>
                 <div class='SendDiv'>
                     <button id="send" class='ChatSend Name'>
-                        ↩
+                        SEND
                     </button>
                 </div>
             </div>
@@ -103,7 +103,7 @@
             const openai = new OpenAIApi(configuration);
 
             openai.createCompletion({
-                model: "text-curie-001",
+                model: "text-davinci-003",
                 prompt: document.querySelector('#input').value,
                 temperature: 0.9,
                 max_tokens: 256,
